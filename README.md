@@ -1,6 +1,6 @@
 # Title
 ## Introduction
-This is the code base for `...` .  
+This is the code base for `Stories for the Win: Creating and Evaluating a Synthetic Dutch Storytelling Dataset for Pretraining`.    
 The file structure is as follows:
 1. `dataset_evaluation`: consists of all the code for the metrics
 2. `datasets`: consists of the code to create a lexicon from a dataset. It also contains the cleaned code for CSTC.

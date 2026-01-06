@@ -29,26 +29,17 @@ class CreativePerplexity():
         if node.pos_ in ('VERB', 'AUX'):
             for child in node.children:
                 if child.dep_ in ('nsubj', 'nsubj:pass', 'obj') and child.text.isalnum():
-                    try:
-                        child_lemma = text_lemmatizer(child.text, lang=self.language)[0]
-                        node_lemma = text_lemmatizer(node.text, lang=self.language)[0]
-                        bag[(child_lemma, node_lemma)] += 1
-                    except:
-                        print(child.text)
-                        print(node.text)
-                        raise
+                    child_lemma = text_lemmatizer(child.text, lang=self.language)[0]
+                    node_lemma = text_lemmatizer(node.text, lang=self.language)[0]
+                    bag[(child_lemma, node_lemma)] += 1
+
         # Nominal heads: adjectival modifiers
         if node.pos_ == 'NOUN' and node.text.isalnum():
             for child in node.children:
                 if child.dep_ == 'amod' and child.pos_ == 'ADJ' and child.text.isalnum():
-                    try:
-                        child_lemma = text_lemmatizer(child.text, lang=self.language)[0]
-                        node_lemma = text_lemmatizer(node.text, lang=self.language)[0]
-                        bag[(child_lemma, node_lemma)] += 1
-                    except:
-                        print(child.text)
-                        print(node.text)
-                        raise
+                    child_lemma = text_lemmatizer(child.text, lang=self.language)[0]
+                    node_lemma = text_lemmatizer(node.text, lang=self.language)[0]
+                    bag[(child_lemma, node_lemma)] += 1
 
         # Recurse
         for child in node.children:

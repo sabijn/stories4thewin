@@ -1,9 +1,10 @@
 # Title
 ## Introduction
-This is the code base for `Stories for the Win: Creating and Evaluating a Synthetic Dutch Storytelling Dataset for Pretraining`.    
+This is the code base for `Stories for the Win: Creating and Evaluating a Synthetic Dutch Storytelling Dataset`.    
 The file structure is as follows:
 1. `dataset_evaluation`: consists of all the code for the metrics
 2. `datasets`: consists of the code to create a lexicon from a dataset. It also contains the cleaned code for CSTC.
+3. `human_eval`: contains the code to prepare the stories for human evaluation and to processes the results.
 3. `prompting`: some examples how to generate (pos experiment and baseline) and prompting for different ages. 
 4. `vendi-score`: a forked version of the official vendi-score package. There were some parts incongruent with newer python versions. 
 5. `paper_usage_metrics.ipynb`: example usage of the metrics for two english datasets

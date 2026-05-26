@@ -3,8 +3,8 @@ import pandas as pd
 import os
 
 # ── Config ──────────────────────────────────────────────────────────────────
-SAMPLES_CSV   = "samples_me_aftersuzan.csv"       # input: merged stories
-QUESTIONS_CSV = "questions_sabijn.csv"     # output: annotations
+SAMPLES_CSV   = "samples.csv"       # input: merged stories
+QUESTIONS_CSV = "questions.csv"     # output: annotations
 
 st.set_page_config(page_title="Story Annotator", page_icon="📖", layout="centered")
 
